@@ -16,7 +16,7 @@ const helmetConfig = {
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.use(helmet());
+  app.use(helmet(helmetConfig));
   // app.enableCors();
   await app.listen(3000);
 }
